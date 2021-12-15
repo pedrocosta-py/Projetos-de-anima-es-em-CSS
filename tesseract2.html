@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento de estudos</title>
+    <style>
+        /*declarações sob elementos*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgb(0, 0, 0);
+            background-image: url("/whatislove.gif");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /*declarações sob conteudos*/
+        .cube{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg);
+            animation: animacao 4s linear infinite;
+        }
+        /*animacao*/
+        @keyframes animacao{
+            0%
+            {
+                transform: rotateX(-30deg) rotateY(0deg);
+            }
+            100%
+            {
+                transform: rotateX(-30deg) rotateY(360deg);
+            }
+        }
+
+        .cube div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%; 
+            width: 100%;
+            transform-style: preserve-3d;
+        }
+
+        .bar{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px; 
+            background: #222;
+            transform: rotateX(90deg) translateZ(150px);
+        }
+
+        .bar::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px; 
+            background: #00fd4c;
+            transform: translateZ(-400px);
+            filter: blur(20px);
+            box-shadow: 0px 0px 120px rgba(9, 255, 0, 0.5), 
+            0px 0px 200px rgba(9, 255, 0, 0.6), 
+            0px 0px 300px rgba(9, 255, 0, 0.7),
+            0px 0px 400px rgba(9, 255, 0, 0.8),
+            0px 0px 500px rgba(9, 255, 0, 0.9);
+        }
+        
+        .cube div span{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%; 
+            width: 100%;
+            background: linear-gradient(rgb(0, 0, 0), rgb(0, 255, 0));
+            transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+        }
+        .line{
+            border-right: 2px solid rgba(245, 245, 245, 0.705);
+            color: rgb(255, 255, 255);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 3em;
+            margin: 0 auto;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .animacao{
+            animation: animationCursor 500ms steps(40) infinite normal, escritaTela 4s steps(45) 1s normal both;
+        }
+        /*animações*/
+        
+        @keyframes animationCursor{
+            from {
+              border-right-color: rgb(245, 245, 245, 0.705);
+           } 
+           to{
+            border-right-color: transparent;
+           }
+        }
+        @keyframes escritaTela{
+            from{
+                width: 0em;
+            }
+            to{
+                width: 18em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header> 
+        <h1 class="line animacao"> Welcome to the Matrix, Neo...</h1> 
+    </header>
+    <main>
+        <div class="cube">
+            <div class="bar"> </div>
+            <div>
+                <span style="--i:0;"></span>
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

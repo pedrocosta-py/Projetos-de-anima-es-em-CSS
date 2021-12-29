@@ -1,15 +1,18 @@
 ### Bem vindo ao repositório! 
 ### Aqui são postados códigos referentes aos meus estudos e desenvolvimento em CSS!
 ###
-<h1 align="center"> 
-  <img src ="https://github.com/sudoAptIPedro/phpKillJava/blob/main/programming.gif" width="600" height="350">
-</h1>
+<header align="center">
+  <h1>
+    <figure>
+        <img src ="https://github.com/sudoAptIPedro/phpKillJava/blob/main/programming.gif" width="600" height="350">
+    </figure>
+    <br>
+     Hey you💻
+  </h1>  
+</header>
 <main>
-  <header align="center">
-    <h1> Hey you🐱‍💻 </h1>
-    <h2> Segue abaixo a lista de enumerada dos códigos😎💻 </h2>
-  </header>
   <nav>
+    <h2> Segue abaixo a lista de enumerada dos códigos😎💻 </h2>
     <ol type ="I">
       <li> Tesseract - Um cubo feito para estudar e praticar animações em CSS </li>
       <li> Escrita em Tela - Uma animação que simula uma escrita em tela com CSS </li>

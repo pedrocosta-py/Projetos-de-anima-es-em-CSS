@@ -12,6 +12,7 @@
   <nav>
     <ol type ="I">
       <li> Tesseract - Um cubo feito para estudar e praticar animações em CSS </li>
+      <li> Escrita em Tela - Uma animação que simula uma escrita em tela com CSS </li>
     </ol>
   </nav>
    <br>
